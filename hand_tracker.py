@@ -1,22 +1,14 @@
 """
-hand_tracker.py
----------------
-Standalone hand-tracking process (MediaPipe + OpenCV).
+Created and Developed By : Sanket Kshirsagar
+Role                      : Senior Research Engineer
+Project                   : Hand Gesture Controlled Robotic System
 
-Publishes control values over a local TCP socket so the robot
-controller can read them in real time.
+Description:
+Main launcher for the hand-tracking and robotic control system.
+Provides real-time gesture-based robot operation, process
+management, monitoring, recalibration, and safe shutdown.
 
-Packet: x, y, z, rot, grip, stop, hand_present  (6 floats + 1 int)
-
-Gestures:
-  - Closed fist (all fingers curled)  → recalibrate centre / Z / rotation
-  - Thumb + index pinch               → gripper close
-  - Thumb + middle finger pinch       → STOP robot motion
-  - Open hand / release               → resume motion, gripper open
-
-Keys in the OpenCV window:
-  q  – quit
-  c  – reset centre / Z / rotation reference
+Copyright © Sanket Kshirsagar
 """
 
 import socket
