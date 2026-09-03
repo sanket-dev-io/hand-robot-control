@@ -1,17 +1,20 @@
 """
-robot_controller.py
--------------------
-Robot motion controller driven ONLY by hand tracking.
+Created and Developed By : Sanket Kshirsagar
+Role                      : Senior Research Engineer
+Project                   : Hand Gesture Controlled Robotic System
 
-Starts hand_tracker.py as a subprocess and connects over TCP
-(127.0.0.1:5005) to receive hand control values.
+Description:
+Main launcher for the hand-tracking and robotic control system.
+Provides real-time gesture-based robot operation, process
+management, monitoring, recalibration, and safe shutdown.
 
-No joystick is used.
+Copyright © Sanket Kshirsagar
 
 Gestures (from hand tracker):
   - Closed fist          → recalibrate (handled in tracker)
   - Thumb + index pinch  → gripper close/open
   - Thumb + middle pinch → STOP all robot motion
+  
 """
 
 import sys
